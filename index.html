@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>திருக்குறள் தமிழ் விளக்கம்</title>
+
+  <!-- Google Fonts: Attractive Tamil + Latin fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700;800&family=Mukta+Malar:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ DARK MODE TOGGLE ============ -->
+  <button id="themeToggleBtn" class="theme-toggle" title="தீம் மாற்று" aria-label="Dark mode toggle">
+    🌙
+  </button>
+
+  <!-- ============ HEADER ============ -->
+  <header class="app-header">
+    <div class="header-content">
+      <h1 class="app-title">  திருக்குறள் தமிழ் விளக்கம்</h1>
+      <p class="app-subtitle">
+        "1330 திருக்குறள்களின் தமிழ் விளக்கங்களை உடனுக்குடன் அறியுங்கள்."
+      </p>
+    </div>
+    <div class="header-wave"></div>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main-container">
+    <!-- Search Card -->
+    <section class="search-card" aria-label="குறள் தேடல்">
+      <div class="input-group">
+        <span class="input-icon"> </span>
+        <input
+          type="number"
+          id="kuralNumberInput"
+          class="kural-input"
+          placeholder="குறள் எண்ணை உள்ளிடுங்கள் (1 - 1330)"
+          min="1"
+          max="1330"
+          inputmode="numeric"
+        />
+      </div>
+
+      <div class="button-row">
+        <button id="searchBtn" class="btn btn-primary">
+          <span> </span> தேடு
+        </button>
+        <button id="randomBtn" class="btn btn-secondary">
+          <span> </span> சீரற்ற குறள்
+        </button>
+      </div>
+
+      <!-- Message area for validation / API errors -->
+      <p id="messageBox" class="message-box" role="alert"></p>
+    </section>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="spinner-wrapper" hidden>
+      <div class="spinner"></div>
+      <p class="spinner-text">  தரவை பெறுகிறது...</p>
+    </div>
+
+    <!-- Result Card -->
+    <section id="resultCard" class="result-card" hidden aria-live="polite">
+      <div class="result-header">
+        <span class="kural-number-badge">
+          குறள் எண் <span id="kuralNumber">-</span>
+        </span>
+        <button id="copyBtn" class="btn btn-copy" title="நகலெடு">
+            நகலெடு
+        </button>
+      </div>
+
+      <div class="kural-lines">
+        <p id="kuralLine1" class="kural-line"></p>
+        <p id="kuralLine2" class="kural-line"></p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="detail-block">
+        <h3 class="detail-title">  தமிழ் விளக்கம்</h3>
+        <p id="kuralExplanation" class="detail-text"></p>
+      </div>
+
+      <div class="detail-chips">
+        <div class="chip">
+          <span class="chip-label">  அதிகாரம்</span>
+          <span id="kuralChapter" class="chip-value">-</span>
+        </div>
+        <div class="chip">
+          <span class="chip-label">  பால்</span>
+          <span id="kuralSection" class="chip-value">-</span>
+        </div>
+      </div>
+
+      <!-- Toast for copy confirmation -->
+      <p id="copyToast" class="copy-toast" hidden>  நகலெடுக்கப்பட்டது!</p>
+    </section>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
