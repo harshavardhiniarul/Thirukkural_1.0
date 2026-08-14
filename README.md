@@ -41,6 +41,8 @@ When an invalid Kural number is entered, the application validates the input and
 ## Project Structure
 
 
+
+```text
 Thirukkural-App/
 │
 ├── static/
@@ -63,7 +65,3 @@ Thirukkural-App/
 ## License
 
 This project is developed for educational purposes.
-<<<<<<< HEAD
-
-=======
->>>>>>> da009a502a4efdcb0668689f211e2bc42a046d38
