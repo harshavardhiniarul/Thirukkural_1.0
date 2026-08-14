@@ -24,19 +24,19 @@ Thirukkural Finder is a web application that enables users to search for any Thi
 
 The home page provides a simple and intuitive interface where users can enter a Thirukkural number and search for the corresponding Kural.
 
-![Home Page](screenshots/home page.png)
+![Home Page](Screenshots/home page.png)
 
 ### Search Result
 
 After a successful search, the application displays the selected Thirukkural along with its Tamil explanation, chapter (அதிகாரம்), and section (பால்).
 
-![Search Result](screenshots/output.png)
+![Search Result](Screenshots/output.png)
 
 ### Invalid Input
 
 When an invalid Kural number is entered, the application validates the input and displays an appropriate error message.
 
-![Invalid Input](screenshots/ validation.png)
+![Invalid Input](Screenshots/ validation.png)
 
 ## Project Structure
 
