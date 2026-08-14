@@ -60,7 +60,4 @@ Thirukkural-App/
 └── README.md
 
 
-```markdown
-## License
 
-This project is developed for educational purposes.
