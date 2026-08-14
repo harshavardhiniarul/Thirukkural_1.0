@@ -40,8 +40,6 @@ When an invalid Kural number is entered, the application validates the input and
 
 ## Project Structure
 
-
-
 ```text
 Thirukkural-App/
 │
